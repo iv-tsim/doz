@@ -1,0 +1,59 @@
+@import "variables"
+@import "fonts"
+
+// Общие настройки
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+*
+    margin: 0
+    outline: none
+    padding: 0
+
+body
+    font-family: "ProximaNova", sans-serif
+    font-weight: 400
+    font-size: 16px
+    color: $colorInfo
+    background-color: #F5F5F5
+
+a
+    display: inline-block
+    text-decoration: none
+
+.wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    overflow-x: hidden
+    min-height: 100vh
+
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.container
+    margin: 0 auto
+    padding: 0 15px
+    max-width: 1170px
+
+.alertify-notifier .ajs-message.ajs-warning
+    box-shadow: 0 0 3px #333
+    background: #fff
+
+.alertify-notifier .ajs-message.ajs-success
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5)
+    color: #fff
+    background: rgba(40, 136, 62, 0.9)
+
+.alertify-notifier
+    z-index: 99998
+
+@import "buttons"
+@import "text"
+@import "inputs"

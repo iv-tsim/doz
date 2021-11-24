@@ -1,0 +1,49 @@
+input, textarea
+    font-family: "ProximaNova", sans-serif
+    appearance: none
+    border-radius: 0
+    border: none
+
+.input
+    border-bottom: 1px solid $colorHead
+    color: #000
+    transition: .3s border-color
+    padding: 12px 0
+    font-size: 16px
+    width: 100%
+    &-wrapper
+        position: relative
+        &.active
+            .input-text
+                font-size: 12px
+                top: -18px
+                left: 0
+        &.invalid
+            .input
+                border-color: $red
+            .input-warning
+                opacity: 1
+                visibility: visible
+    &-text
+        position: absolute
+        top: 11px
+        left: 0
+        color: $colorHead
+        pointer-events: none
+        transition: .3s font-size, .3s top, .3s left
+        white-space: nowrap
+    &:hover, &:focus
+        border-color: $colorLink
+    &:focus,&:-webkit-autofill
+        ~ .input-text
+            font-size: 12px
+            top: -18px
+            left: 0
+    &-warning
+        color: $red
+        opacity: 0
+        visibility: hidden
+        transition: .3s opacity, .3s visibility
+    &-star
+        margin: 7px 0
+        font-size: 12px

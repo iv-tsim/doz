@@ -1,0 +1,22 @@
+.btn
+    background-color: $colorLink
+    color: $colorText
+    padding: 18px 30px
+    text-align: center
+    cursor: pointer
+    transition: .3s background-color, .3s color, .3s border-color
+    border: 1px solid $colorLink
+    &:hover
+        background-color: $colorHoverLink
+        color: #fff
+    &_transparent
+        background-color: transparent
+        color: $colorLink
+        &:hover
+            background-color: $colorLink
+            color: $colorText
+            border-color: $colorLink
+    &_gray
+        background-color: transparent
+        border-color: $colorText
+        color: $colorText
