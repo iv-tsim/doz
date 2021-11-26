@@ -1,0 +1,44 @@
+.app
+    display: flex
+    align-items: flex-start
+    padding-bottom: 60px
+    &-main
+        width: 50%
+        background-color: transparentize($orange, .7)
+        position: relative
+        padding-top: 50px
+        padding-bottom: 50px
+        padding-right: 100px
+        padding-left: calc((100% - 1140px) / 2)
+    &-title
+        margin-bottom: 20px
+    &-dec
+        position: absolute
+        right: 30px
+        bottom: -50px
+    &-text
+        color: $colorHead
+        margin-bottom: 30px
+    &-input
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+    &-img
+        width: 50%
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        &__sizer
+            padding-bottom: 73.8%
+    &-submit
+        display: inline-block
+
+.policy
+    margin: 30px 0
+    display: flex
+    align-items: center
+    img
+        margin-right: 15px
+    a
+        color: $colorLink
+        text-decoration: underline

@@ -190,8 +190,10 @@ input, textarea {
   -webkit-transition: .3s border-color;
   transition: .3s border-color;
   padding: 12px 0;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
+  background-color: transparent;
+  font-weight: 300;
 }
 
 .input-wrapper {
@@ -200,7 +202,7 @@ input, textarea {
 
 .input-wrapper.active .input-text {
   font-size: 12px;
-  top: -18px;
+  top: -10px;
   left: 0;
 }
 
@@ -215,7 +217,7 @@ input, textarea {
 
 .input-text {
   position: absolute;
-  top: 11px;
+  top: 13px;
   left: 0;
   color: #474746;
   pointer-events: none;
@@ -230,7 +232,7 @@ input, textarea {
 
 .input:focus ~ .input-text, .input:-webkit-autofill ~ .input-text {
   font-size: 12px;
-  top: -18px;
+  top: -10px;
   left: 0;
 }
 
@@ -339,6 +341,74 @@ input, textarea {
   width: 100%;
 }
 
+.footer {
+  background-color: #F18823;
+  padding: 50px 0;
+  color: #fff;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-logo {
+  margin-bottom: 40px;
+}
+
+.footer-copyright {
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.footer-policy {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 260px;
+}
+
+.footer-address {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.footer-phone {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-email {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-dev {
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
 .item {
   background-color: #F5F5F5;
 }
@@ -398,6 +468,83 @@ input, textarea {
 
 .slider-arrow:hover {
   fill: #F18823;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 60px;
+}
+
+.app-main {
+  width: 50%;
+  background-color: rgba(249, 179, 60, 0.3);
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 100px;
+  padding-left: calc((100% - 1140px) / 2);
+}
+
+.app-title {
+  margin-bottom: 20px;
+}
+
+.app-dec {
+  position: absolute;
+  right: 30px;
+  bottom: -50px;
+}
+
+.app-text {
+  color: #474746;
+  margin-bottom: 30px;
+}
+
+.app-input {
+  margin-bottom: 15px;
+}
+
+.app-input:last-child {
+  margin-bottom: 0;
+}
+
+.app-img {
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.app-img__sizer {
+  padding-bottom: 73.8%;
+}
+
+.app-submit {
+  display: inline-block;
+}
+
+.policy {
+  margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.policy img {
+  margin-right: 15px;
+}
+
+.policy a {
+  color: #F18823;
+  text-decoration: underline;
 }
 
 .hero {

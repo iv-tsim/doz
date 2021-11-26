@@ -9,14 +9,16 @@ input, textarea
     color: #000
     transition: .3s border-color
     padding: 12px 0
-    font-size: 16px
+    font-size: 18px
     width: 100%
+    background-color: transparent
+    font-weight: 300
     &-wrapper
         position: relative
         &.active
             .input-text
                 font-size: 12px
-                top: -18px
+                top: -10px
                 left: 0
         &.invalid
             .input
@@ -26,7 +28,7 @@ input, textarea
                 visibility: visible
     &-text
         position: absolute
-        top: 11px
+        top: 13px
         left: 0
         color: $colorHead
         pointer-events: none
@@ -34,10 +36,10 @@ input, textarea
         white-space: nowrap
     &:hover, &:focus
         border-color: $colorLink
-    &:focus,&:-webkit-autofill
+    &:focus, &:-webkit-autofill
         ~ .input-text
             font-size: 12px
-            top: -18px
+            top: -10px
             left: 0
     &-warning
         color: $red
