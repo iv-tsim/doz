@@ -1,0 +1,31 @@
+.card
+    &-container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-gap: 30px
+    &-slider
+        &__wrapper
+            grid-column: 5 span / auto
+    &-main
+        grid-column: 7 / 13
+    &-slider
+        margin-bottom: 25px
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            background-color: #fff
+            &-sizer
+                padding-bottom: 90%
+    &-thumbs
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            cursor: pointer
+            transition: .3s box-shadow
+            background-color: #fff
+            &:hover, &.swiper-slide-thumb-active
+                box-shadow: 0px 0px 0px 1px $colorLink inset
+            &-sizer
+                padding-bottom: 91%
