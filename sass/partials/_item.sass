@@ -1,17 +1,28 @@
 .item
+    background-color: #F5F5F5
     &-img
         background-repeat: no-repeat
         background-position: right top
         background-size: contain
-        border: 1px solid $outlineColor
+        box-shadow: 0px 0px 0px 1px $colorInfo inset
         background-color: #fff
         margin-bottom: 30px
+        transition: .3s box-shadow
         &__sizer
             padding-bottom: 88%
     &-title
         margin-bottom: 10px
+        transition: .3s color
     &-text
         color: $colorInfo
         margin-bottom: 10px
+        transition: .3s color
     &-specs
         color: $colorInfo
+    &:hover
+        .item-img
+            box-shadow: 0px 0px 0px 4px $colorLink inset
+        .item-text
+            color: $colorText
+        .item-title
+            color: $colorLink

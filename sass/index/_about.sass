@@ -1,0 +1,42 @@
+.about
+    display: flex
+    align-items: flex-start
+    &-img
+        width: 50%
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        position: relative
+        z-index: 1
+        &__sizer
+            padding-bottom: 63.8%
+    &-main
+        margin-top: 100px
+        width: 50%
+        background-color: transparentize($orange, .7)
+        padding-left: 130px
+        padding-top: 65px
+        padding-bottom: 65px
+        padding-right: calc((100% - 1140px) / 2)
+        position: relative
+        &::after
+            position: absolute
+            display: block
+            content: ''
+            height: 100%
+            width: 120px
+            background-color: transparentize($orange, .7)
+            left: -120px
+            top: 0
+    &-dec
+        position: absolute
+        top: -160px
+        right: 160px
+    &-title
+        margin-bottom: 50px
+    &-text
+        margin-bottom: 30px
+        p
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
