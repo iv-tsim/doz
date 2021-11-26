@@ -877,3 +877,54 @@ input, textarea {
 .card-thumbs__item-sizer {
   padding-bottom: 91%;
 }
+
+.card-title {
+  margin-bottom: 30px;
+}
+
+.card-subtitle {
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.card-name {
+  margin-bottom: 15px;
+}
+
+.card-bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card-final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-quantity {
+  border: 1px solid #F18823;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8px;
+}
+
+.card-input {
+  height: 100%;
+  background: transparent;
+  text-align: center;
+  margin: 0 10px;
+  max-width: 100px;
+}
+
+.card-amount {
+  cursor: pointer;
+}
