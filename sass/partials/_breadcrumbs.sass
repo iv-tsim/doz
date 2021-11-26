@@ -1,0 +1,16 @@
+.breadcrumbs
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    color: $colorInfo
+    padding-top: 30px
+    padding-bottom: 60px
+    &-item
+        color: $colorInfo
+        transition: .3s color
+        &.inactive
+            color: $colorLink
+        &:hover
+            color: $colorLink
+    &-dec
+        margin: 0 5px

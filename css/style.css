@@ -341,6 +341,18 @@ input, textarea {
   width: 100%;
 }
 
+.header-lang {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #090909;
+  -webkit-transition: .3s color;
+  transition: .3s color;
+}
+
+.header-lang:hover {
+  color: #F18823;
+}
+
 .footer {
   background-color: #F18823;
   padding: 50px 0;
@@ -547,6 +559,38 @@ input, textarea {
   text-decoration: underline;
 }
 
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #565656;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.breadcrumbs-item {
+  color: #565656;
+  -webkit-transition: .3s color;
+  transition: .3s color;
+}
+
+.breadcrumbs-item.inactive {
+  color: #F18823;
+}
+
+.breadcrumbs-item:hover {
+  color: #F18823;
+}
+
+.breadcrumbs-dec {
+  margin: 0 5px;
+}
+
 .hero {
   background-repeat: no-repeat;
   background-position: center center;
@@ -706,6 +750,10 @@ input, textarea {
 
 .gallery-arrow__right {
   right: -34px;
+}
+
+.catalog {
+  padding-bottom: 120px;
 }
 
 .catalog-list {
