@@ -55,6 +55,39 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    document.addEventListener('click', function(event) {
+        let target = event.target;
+
+        if (!target.closest('.card-select__top')) {
+            document.querySelectorAll('.card-select').forEach(function (item) {
+                item.classList.remove('active');
+            });
+        }
+
+        if (target.closest('.card-select__top')) {
+            let currentTarget = target.closest('.card-select');
+
+            if (currentTarget.classList.contains('active')) {
+                currentTarget.classList.remove('active');
+                return;
+            }
+
+            document.querySelectorAll('.card-select').forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            currentTarget.classList.add('active');
+        }
+
+        if (target.matches('.card-select__item')) {
+            target.closest('.card-select__main').querySelectorAll('.card-select__item').forEach(function(item) {
+                item.classList.remove('active');
+            });
+            target.classList.add('active');
+            target.closest('.card-select').querySelector('.card-select__value').textContent = target.textContent;
+        }
+    })
+
     if (document.querySelector('div#map')) {
         ymaps.ready(function () {
             var myMap = new ymaps.Map('map', {

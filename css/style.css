@@ -928,3 +928,113 @@ input, textarea {
 .card-amount {
   cursor: pointer;
 }
+
+.card-profile {
+  margin-bottom: 25px;
+}
+
+.card-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.card-list__item {
+  text-align: center;
+  color: #565656;
+  border: 1px solid #BABABA;
+  cursor: pointer;
+  -webkit-transition: .3s border-color, .3s color;
+  transition: .3s border-color, .3s color;
+  padding: 8px 16px;
+}
+
+.card-list__item:hover, .card-list__item.active {
+  border-color: #F18823;
+  color: #090909;
+}
+
+.card-select {
+  width: 100%;
+  position: relative;
+}
+
+.card-select__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 8px 16px;
+  border: 1px solid #BABABA;
+  cursor: pointer;
+  color: #090909;
+  -webkit-transition: .3s border-color;
+  transition: .3s border-color;
+}
+
+.card-select__top::after {
+  position: absolute;
+  display: block;
+  content: '';
+  background-image: url(../img/card/arrow_down.svg);
+  width: 7px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+}
+
+.card-select__main {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  border: 1px solid #F18823;
+  border-top: none;
+  padding: 8px 16px 8px 16px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s opacity, .3s visibility;
+  transition: .3s opacity, .3s visibility;
+  overflow: auto;
+  pointer-events: none;
+  background-color: #F5F5F5;
+}
+
+.card-select__item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: .3s color;
+  transition: .3s color;
+}
+
+.card-select__item:last-child {
+  margin-bottom: 0;
+}
+
+.card-select__item:hover, .card-select__item.active {
+  color: #F18823;
+}
+
+.card-select.active .card-select__top {
+  border-color: #F18823;
+}
+
+.card-select.active .card-select__main {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}

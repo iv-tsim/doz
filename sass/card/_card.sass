@@ -56,3 +56,75 @@
         max-width: 100px
     &-amount
         cursor: pointer
+    &-profile
+        margin-bottom: 25px
+    &-list
+        display: grid
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px
+        &__item
+            text-align: center
+            color: $colorInfo
+            border: 1px solid #BABABA
+            cursor: pointer
+            transition: .3s border-color, .3s color
+            padding: 8px 16px
+            &:hover, &.active
+                border-color: $colorLink
+                color: $colorText
+    &-select
+        width: 100%
+        position: relative
+        &__top
+            display: flex
+            align-items: center
+            justify-content: space-between
+            position: relative
+            padding: 8px 16px
+            border: 1px solid #BABABA
+            cursor: pointer
+            color: $colorText
+            transition: .3s border-color
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                background-image: url(../img/card/arrow_down.svg)
+                width: 7px
+                height: 10px
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                top: 50%
+                transform: translateY(-50%)
+                right: 15px
+        &__main
+            position: absolute
+            top: calc(100% - 1px)
+            left: 0
+            width: 100%
+            border: 1px solid $colorLink
+            border-top: none
+            padding: 8px 16px 8px 16px
+            z-index: 2
+            opacity: 0
+            visibility: hidden
+            transition: .3s opacity, .3s visibility
+            overflow: auto
+            pointer-events: none
+            background-color: #F5F5F5
+        &__item
+            margin-bottom: 10px
+            cursor: pointer
+            transition: .3s color
+            &:last-child
+                margin-bottom: 0
+            &:hover, &.active
+                color: $colorLink
+        &.active
+            .card-select__top
+                border-color: $colorLink
+            .card-select__main
+                opacity: 1
+                visibility: visible
+                pointer-events: all
