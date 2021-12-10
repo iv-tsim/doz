@@ -40,3 +40,29 @@
             margin-bottom: 15px
             &:last-child
                 margin-bottom: 0
+
+@media (max-width: 1500px)
+    .about
+        &-main
+            padding-left: 90px
+        &-dec
+            right: 100px
+
+@media (max-width: 1200px)
+    .about
+        flex-direction: column
+        &-img
+            width: 100%
+        &-main
+            width: 100%
+            margin-top: 0
+            padding: 40px 15px
+        &-title
+            margin-bottom: 30px
+        &-dec
+            display: none
+
+@media (max-width: 500px)
+    .about
+        &-main
+            padding: 30px 15px

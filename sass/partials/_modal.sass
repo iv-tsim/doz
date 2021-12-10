@@ -1,0 +1,115 @@
+.policy
+    color: #000
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+        background: #fff
+        button.fancybox-close-small
+            display: none
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 40px
+        color: #000
+    &-text
+        margin-bottom: 15px
+        font-size: 16px
+        color: #000
+    &-list
+        list-style: none
+        font-size: 16px
+        color: #000
+        &__item
+            font-size: 16px
+            padding-left: 20px
+            margin-bottom: 12px
+            position: relative
+            &::before
+                position: absolute
+                left: 7px
+                top: 7px
+                display: block
+                content: ''
+                width: 3px
+                height: 3px
+                background-color: $red
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modal
+    position: relative
+    background-color: #fff
+    color: #000
+    padding: 40px
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 450px
+    &-wrapper.fancybox-content
+        padding: 0
+        button.fancybox-close-small
+            display: none
+    &-title
+        margin-bottom: 30px
+    &-input
+        margin-bottom: 25px
+        width: 100%
+    &-submit
+        width: 100%
+        border: none
+    &-close
+        position: absolute
+        top: 0
+        right: 0
+        width: 50px
+        height: 50px
+        border: 1px solid #000
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        &__img
+            width: 30%
+    &-btn
+        width: 100%
+    &-policy
+        font-size: 12px
+        margin-bottom: 30px
+        a
+            color: #000
+            &::after
+                background-color: #000
+
+@media (max-width: 800px)
+    .modal
+        padding: 30px
+        &-title
+            margin-bottom: 20px
+        &-input
+            margin-bottom: 20px
+        &-policy
+            margin-bottom: 20px
+        &-close
+            width: 40px
+            height: 40px
+        &-contacts
+            margin-bottom: 30px
+    .policy
+        &-wrapper.fancybox-content
+            padding: 15px
+            padding-top: 40px
+        &-title
+            margin-bottom: 20px
+        &-list
+            &__item
+                padding-left: 15px
+                &::before
+                    left: 5px
+
+@media (max-width: 500px)
+    .modal
+        padding: 25px 20px

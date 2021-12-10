@@ -1,0 +1,204 @@
+.type
+    &-container
+        padding-bottom: 130px
+        p
+            margin-top: 15px
+            font-size: 20px
+            line-height: 150%
+        h1, h2, h3, h4
+            font-weight: 700
+            text-transform: uppercase
+        h1
+            font-size: 40px
+            margin-top: 30px
+        h2
+            font-size: 30px
+            margin-top: 25px
+        h3
+            font-size: 24px
+            margin-top: 20px
+        h4
+            font-size: 20px
+            margin-top: 15px
+        h5
+            margin-top: 15px
+        ul, ol
+            margin-top: 25px
+    a
+        color: #000 
+        transition: .3s color
+        &:hover
+            color: $colorLink
+    .bold
+        font-weight: 700
+    .small
+        font-size: 16px
+    .center
+        text-align: center
+    .uc
+        text-transform: uppercase
+    ul, ol
+        display: flex
+        flex-direction: column
+        list-style: none
+    ul
+        li
+            position: relative
+            padding-left: 40px
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+            &::after
+                position: absolute
+                content: ''
+                width: 20px
+                height: 3px
+                background-color: $colorLink
+                left: 2px
+                top: 9px
+            span
+                color: $colorLink
+        &.white
+            li
+                color: #fff
+                &::after
+                    background-color: #fff
+        &.reverse
+            li
+                padding-left: 0
+                padding-right: 30px
+                text-align: right
+                &::after
+                    left: auto
+                    right: 2px
+    ol
+        counter-reset: section
+    ol > li
+        padding-left: 40px
+        position: relative
+        display: flex
+        align-items: center
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+        &::before
+            position: absolute
+            left: 0
+            top: 0
+            counter-increment: section
+            content: counter(section)
+            color: $colorLink
+    .table
+        overflow: auto
+        margin-top: 30px
+    table
+        width: 100%
+        font-size: 16px
+        border-spacing: 0
+        min-width: 600px
+        th
+            background-color: $formColor
+            padding: 20px 30px
+            text-align: left
+            font-size: 18px
+            font-weight: 700
+            color: #ffffff
+            text-transform: uppercase
+        tr
+            td
+                padding: 20px 30px
+                font-size: 16px
+                border-top: none
+                &:nth-child(n + 2)
+                    border-left: none
+
+@media (max-width: 1450px)
+    .type
+        ul
+            li
+                &::after
+                    top: 8px
+        &-container
+            padding-bottom: 100px
+            p
+                margin-top: 10px
+                font-size: 18px
+            h1
+                font-size: 36px
+                margin-top: 25px
+            h2
+                font-size: 28px
+                margin-top: 20px
+            h3
+                font-size: 22px
+                margin-top: 15px
+            h4
+                font-size: 20px
+                margin-top: 10px
+            h5
+                margin-top: 10px
+            ul, ol
+                margin-top: 15px
+                font-size: 18px
+            ol
+                margin-top: 20px
+        ul
+            li
+                padding-left: 25px
+                margin-bottom: 15px
+            &.reverse
+                li
+                    padding-right: 25px
+        ol > li
+            padding-left: 55px
+            margin-bottom: 15px
+            min-height: 40px
+            &::before
+                width: 40px
+                height: 40px
+        table
+            font-size: 16px
+            margin-top: 15px
+            th
+                padding: 15px 20px
+                font-size: 16px
+            tr
+                td
+                    padding: 15px 20px
+                    font-size: 15px
+
+@media (max-width: 800px)
+    .type
+        &-container
+            padding-bottom: 50px
+            h1
+                font-size: 28px
+                margin-top: 20px
+            h2
+                font-size: 24px
+                margin-top: 15px
+            h3
+                font-size: 20px
+                margin-top: 10px
+            h4
+                font-size: 18px
+                margin-top: 10px
+
+@media (max-width: 500px)
+    .type
+        &-container
+            padding-bottom: 40px
+            p
+                font-size: 16px
+            h1
+                font-size: 24px
+                margin-top: 20px
+            h2
+                font-size: 22px
+                margin-top: 15px
+            h3
+                font-size: 18px
+                margin-top: 10px
+            h4
+                font-size: 17px
+                margin-top: 10px

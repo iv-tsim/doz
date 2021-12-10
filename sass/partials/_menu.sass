@@ -1,0 +1,64 @@
+.menu
+    display: flex
+    flex-direction: column
+    position: fixed
+    right: -100%
+    top: 0
+    z-index: 20
+    width: 100%
+    height: 100%
+    padding: 20px 20px 30px
+    background-color: #fff
+    transition: 0.3s right
+    &-top
+        display: flex
+        justify-content: space-between
+        padding-bottom: 30px
+    &-logo
+        img
+            max-width: 220px
+    &-close
+        cursor: pointer
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        flex-grow: 1
+        overflow: auto
+        padding-bottom: 20px
+    &-sublinks
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 30px
+        font-size: 20px
+    &-link
+        margin-bottom: 15px
+        font-weight: 400
+        color: #000
+        &_big
+            font-weight: 700
+            text-transform: uppercase
+            font-size: 20px
+        &:last-child
+            margin-bottom: 0
+    &-sublink
+        margin-bottom: 10px
+        color: #000
+        &:last-child
+            margin-bottom: 0
+    &-bottom
+        display: flex
+        justify-content: space-between
+        border-top: 1px solid #000
+        padding-top: 20px
+    &-contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &-phone, &-email
+        color: #000
+    &-phone
+        margin-bottom: 10px
+    &.active
+        right: 0

@@ -50,3 +50,36 @@
         transition: .3s color
         &:hover
             color: $colorLink
+    &-burger
+        display: none
+        flex-direction: column
+        justify-content: space-between
+        width: 37px
+        height: 34px
+        margin-right: -10px
+        padding: 10px
+        div
+            height: 2px
+            background-color: #000
+            &:nth-child(2)
+                margin: 4px 0
+
+@media (max-width: 900px)
+    .header
+        &-top
+            padding: 12px 0
+        &-logo
+            img
+                max-width: 250px
+        &-contacts
+            display: none
+        &-menu
+            display: none
+        &-burger
+            display: flex
+
+@media (max-width: 350px)
+    .header
+        &-logo
+            img
+                max-width: 210px

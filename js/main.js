@@ -9,8 +9,6 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function () {
     let gallerySlider = new Swiper('.gallery-slider', {
         slidesPerGroup: 1,
-        slidesPerView: 6,
-        spaceBetween: 30,
         observer: true,
         observeParents: true,
         touchEventsTarget: 'wrapper',
@@ -18,15 +16,53 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.slider-arrow.gallery-arrow.gallery-arrow__left',
             nextEl: '.slider-arrow.gallery-arrow.gallery-arrow__right',
         },
+        breakpoints: {
+            1100: {
+                slidesPerView: 6,
+                spaceBetween: 30
+            },
+            800: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            600: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            400: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            }
+        }
     });
 
     let cardThumbs = new Swiper('.card-thumbs', {
         slidesPerGroup: 1,
-        slidesPerView: 5,
-        spaceBetween: 30,
         observer: true,
         observeParents: true,
-        touchEventsTarget: 'wrapper'
+        touchEventsTarget: 'wrapper',
+        breakpoints: {
+            1100: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            },
+            800: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            650: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            },
+            0: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
     });
 
     let cardSlider = new Swiper('.card-slider', {
@@ -53,6 +89,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 parent.classList.add('active');
             }
         }
+    });
+
+    const burger = document.querySelector('.header-burger');
+    const menu = document.querySelector('.menu');
+    const menuClose = document.querySelector('.menu-close');
+
+    burger.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+    menuClose.addEventListener('click', function() {
+        menu.classList.remove('active');
     });
 
     document.addEventListener('click', function(event) {
@@ -86,7 +133,13 @@ document.addEventListener('DOMContentLoaded', function () {
             target.classList.add('active');
             target.closest('.card-select').querySelector('.card-select__value').textContent = target.textContent;
         }
-    })
+
+        if (!target.closest('.menu') && menu.classList.contains('active') && !target.closest('.header-burger')) {
+            event.preventDefault();
+
+            menu.classList.remove('active');
+        }
+    });
 
     if (document.querySelector('div#map')) {
         ymaps.ready(function () {
